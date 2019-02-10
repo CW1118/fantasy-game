@@ -1,7 +1,7 @@
 //board is 9x9 so 81 spaces
 const board_Size  = 81;
-const rows = Math.sqrt(board_Size);
-const cols = Math.sqrt(board_Size);
+const rows = 9;
+const cols = 9;
 const initialX = 5;
 const initialY = 9;
 const player_ID = "player";
@@ -13,7 +13,7 @@ function generateStart()
   var i;
   for (i = 0; i < board_Size; i++)
   {
-    if(initialX == i%rows && initialY == Math.floor(board_Size/cols))
+    if((initialX == (i % rows)) && (initialY == Math.floor(board_Size/cols)))
     {
       walkingSpaces[i] = player_ID;
     }else{
@@ -24,10 +24,11 @@ function generateStart()
 
 class player
 {
-  constructor(initialX, initialY)
+  constructor(initialX, initialY, walkingSpaces)
   {
     this.x = initialX;
     this.y = initialY;
+    this.walkingSpaces = walkingSpaces;
   }
 
 
@@ -60,7 +61,7 @@ class player
 
 function printTest()
 {
-  document.write(protagonist.PlayerIndex());
+  document.write(protagonist.PlayerIndex);
 
 }
 
