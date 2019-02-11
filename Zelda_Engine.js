@@ -8,20 +8,6 @@ const player_ID = "player";
 var walkingSpaces = [board_Size];
 var x, y;
 
-function generateStart()
-{
-  var i;
-  for (i = 0; i < board_Size; i++)
-  {
-    if((initialX == (i % rows)) && (initialY == Math.ceil(i/cols)))
-    {
-      walkingSpaces[i] = player_ID;
-    }else{
-      walkingSpaces[i] = "None";
-    }
-  }
-}
-
 class player
 {
   constructor(initialX, initialY, walkingSpaces)
