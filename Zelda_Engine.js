@@ -6,15 +6,15 @@ var initialX = 5;
 var initialY = 9;
 const player_ID = "player";
 var walkingSpaces = [board_Size];
-var x, y;
+
+walkingSpaces = generateStart(initialX, initialY);
 
 class player
 {
-  constructor(initialX, initialY, walkingSpaces)
+  constructor()
   {
-    this.x = initialX;
-    this.y = initialY;
-    this.walkingSpaces = walkingSpaces;
+    
+    
   }
 
 
@@ -30,30 +30,28 @@ class player
     }
   }
 
-  get PlayerX()
+  set playerCoords(dir)
   {
-    var x = (PlayerIndex() % 9);
-    return x;
+    switch(dir)
+    {
+      case "UP":
+      walkingSpaces[PlayerIndex()] = "None";
+      walkingSpaces[PlayerIndex() - 9] = player_ID;
+      break;
+      default:
+      document.write("Whoops");
+    }
   }
-
-  get PlayerY()
-  {
-    var y = (Math.floor(PlayerIndex()/9));
-    return y;
-  }
-
 }
 
 
 function printTest()
 {
   document.write(protagonist.PlayerIndex);
-  document.write(protagonist.PlayerX);
-  document.write(protagonist.PlayerY);
-
+  protagonist.playerCoords("UP");
+  document.write(protagonist.PlayerIndex);
 }
 
-generateStart();
 let protagonist = new player()
 
 //document.getElementById(printTest).innerHTML = protagonist.PlayerX();

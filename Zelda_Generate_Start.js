@@ -1,5 +1,7 @@
+
 function generateStart(initialX, initialY)
 {
+  var walkingSpaces = [81];
   var i;
   for (i = 0; i < board_Size; i++)
   {
@@ -10,4 +12,5 @@ function generateStart(initialX, initialY)
       walkingSpaces[i] = "None";
     }
   }
+  return walkingSpaces;
 }
