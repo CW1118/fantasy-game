@@ -63,6 +63,12 @@ class player
 function printTest()
 {
   document.write(protagonist.PlayerIndex);
+<<<<<<< HEAD
+=======
+  document.write(protagonist.PlayerX);
+  document.write(protagonist.PlayerY);
+
+>>>>>>> 14c8f29b695b1a905d0f6df7257cf2d007c66fff
 }
 
 generateStart();

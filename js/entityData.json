@@ -1,0 +1,29 @@
+var e = {
+    mainCharacter: {
+        moveableObject: true,
+        isMoving: false,
+        health: 100,
+        currentWeapon: null,
+        mortal: true,
+        weapons: [],
+        sprite: "IMAGE_PATH"
+    },
+    rock: {
+        moveableObject: false,
+        mortal: false,
+        sprite: "IMAGE_PATH"
+    },
+    wall: {
+        moveableObject: false,
+        mortal: false,
+        sprite: "IMAGE_PATH"
+    },
+    crab: {
+        moveableObject: true,
+        isMoving: false,
+        health: 100,
+        currentWeapon: 'mudBall',
+        mortal: true,
+        sprite: "IMAGE_PATH"
+    }
+};
