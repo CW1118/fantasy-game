@@ -36,6 +36,7 @@ class player
     var i;
     for (i = 0; i < board_Size; i++)
     {
+        console.log(walkingSpaces[i]);
       if(walkingSpaces[i] == player_ID)
       {
         return i;
@@ -60,11 +61,10 @@ class player
 
 function printTest()
 {
-  document.write(protagonist.PlayerIndex());
-
+  document.write(protagonist.PlayerIndex);
 }
 
 generateStart();
-let protagonist = new player()
+let protagonist = new player();
 
 //document.getElementById(printTest).innerHTML = protagonist.PlayerX();
